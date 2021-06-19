@@ -1,0 +1,97 @@
+body {
+    margin: 40px;
+  }
+  
+  /* This defines the areas of the grid come back to this in .wrapper */
+  .nav {
+    grid-area: nav;
+  }
+  
+  .header{
+    grid-area: header;
+  }
+  .links {
+      grid-area: links;
+    }
+  
+    .emailBox {
+      grid-area: emailBox;
+    }
+  
+    .content {
+      grid-area: content;
+    }
+  
+  
+    .footer {
+      grid-area: footer;
+    }
+  
+    .wrapper {
+      background-color: #fff;
+      color: #444;
+    }
+  
+    .wrapper {
+      display: grid;
+      grid-gap: 1em;
+      /* Mobile first development */
+      grid-template-areas:
+       "nav"
+       "header"
+       "links"
+       /* "content" */
+       "emailBox"
+       "footer"
+    }
+    /* Tablet sized resolutions */
+    @media only screen and (min-width: 500px)  {
+    
+    .wrapper {
+  
+      grid-template-columns: 20% auto;
+      grid-template-areas:
+      "nav      nav"
+      "header   header"
+      "links    links"
+      /* "content  content" */
+      "emailBox emailBox"
+      "footer   footer";
+    }
+    }
+  
+    @media only screen and (min-width: 600px)   {
+      body {
+        background-color: aqua;
+      }
+      .wrapper {
+        grid-gap: 20px;
+        grid-template-columns: 120px auto 120px;
+        grid-template-areas:
+        "nav  nav  nav"
+        "header  header  header"
+        "links   links   links"
+        /* "content content content" */
+        "emailBox emailBox emailBox"
+        "footer  footer  footer";
+        max-width: 600px;
+      }
+    }
+  
+  .box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 150%; 
+  }
+  
+  .header,
+  .footer {
+    background-color: #999;
+  }
+  
+  .sidebar2 {
+    background-color: #ccc;
+    color: #444;
+  }
